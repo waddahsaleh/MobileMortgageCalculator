@@ -40,4 +40,10 @@ public class MainActivity extends AppCompatActivity {
         // Display the result
         resultTextView.setText("Monthly Payment: $" + String.format("%.2f", monthlyPayment));
     }
+    public void openWebsite(View view) {
+        String url = "https://apps.td.com/mortgage-payment-calculator/";
+
+        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+        startActivity(intent);
+    }
 }
