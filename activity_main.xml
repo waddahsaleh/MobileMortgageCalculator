@@ -7,33 +7,66 @@
     tools:context=".MainActivity">
 
     <EditText
-        android:id="@+id/principalAmountEditText"
+        android:id="@+id/background"
         android:layout_width="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_height="match_parent"
+        android:layout_marginTop="0dp"
+        android:background="@color/green"/>
+
+
+    <EditText
+        android:id="@+id/TitlePage"
+        android:layout_width="wrap_content"
+        android:layout_centerHorizontal="true"
         android:layout_height="wrap_content"
-        android:hint="Principal Amount"/>
+        android:layout_marginTop="10dp"
+        android:hint="Waddah's Mortgage Calculator"
+        android:background="@color/material_dynamic_neutral_variant90"
+        android:textColor="@color/black"/>
+    <EditText
+        android:id="@+id/principalAmountEditText"
+        android:layout_width="350dp"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:hint="Mortgage Amount"/>
 
     <EditText
         android:id="@+id/interestRateEditText"
-        android:layout_width="match_parent"
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
         android:layout_below="@+id/principalAmountEditText"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="20dp"
         android:hint="Interest Rate (%)"/>
 
     <EditText
         android:id="@+id/loanTermEditText"
-        android:layout_width="match_parent"
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
         android:layout_below="@+id/interestRateEditText"
-        android:layout_marginTop="16dp"
-        android:hint="Loan Term (years)"/>
+        android:layout_marginTop="20dp"
+        android:hint="Loan Term (In years)"/>
+
+    <Button
+        android:id="@+id/openWebsiteButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/calculateButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="550dp"
+        android:text="TD Mortgage Calculator"
+        android:onClick="openWebsite"
+        tools:ignore="UnknownId" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/loanTermEditText"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="20dp"
         android:text="Calculate"
         android:onClick="calculateMonthlyPayment"/>
 
